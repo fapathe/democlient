@@ -1,5 +1,5 @@
 - name: Notification de succès
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Afficher un message de succès
       debug:
