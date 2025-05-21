@@ -1,0 +1,11 @@
+- name: Désinstaller NGINX
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Supprimer le paquet nginx
+      package:
+        name: nginx
+        state: absent
+
+   
