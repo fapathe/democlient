@@ -1,5 +1,5 @@
 - name: Simulation Archivage
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Copier le rapport dans une archive
       copy:
