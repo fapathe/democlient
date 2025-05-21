@@ -1,5 +1,5 @@
 - name: Installer et démarrer NGINX
-  hosts: webservers
+  hosts: all
   become: true
   tasks:
     - name: Installer nginx
