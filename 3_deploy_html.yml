@@ -1,5 +1,5 @@
 - name: Déployer la page HTML BIS
-  hosts: webservers
+  hosts: all
   become: true
   vars:
     app_path: /usr/share/nginx/html
