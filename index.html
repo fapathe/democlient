@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portail BIS</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding-top: 50px; background-color: #f4f4f4; }
-    h1 { color: #007BFF; }
-    p { font-size: 1.2em; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #003366, #005599);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 1em 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0.2em 0;
+    }
+
+    p {
+      font-size: 1.3em;
+      margin-bottom: 1em;
+    }
+
+    .btn {
+      background-color: #ffcc00;
+      color: #003366;
+      padding: 0.8em 1.5em;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #e6b800;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.9em;
+      color: #cccccc;
+    }
   </style>
 </head>
 <body>
-  <h1>Bienvenue sur la plateforme BIS</h1>
-  <p>Déployée automatiquement avec Ansible 🚀</p>
+  <header>
+    <h1>Bienvenue sur le Portail BIS</h1>
+    <p>Votre infrastructure automatisée avec Ansible Automation Platform</p>
+    <a href="#" class="btn">Explorer les Services</a>
+  </header>
+  <footer>
+    &copy; 2025 Banque BIS - Tous droits réservés.
+  </footer>
 </body>
 </html>
