@@ -1,0 +1,18 @@
+- name: Orchestration BIS - Traitement de Fin de Journée avec CSV
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: 01 - Extraction
+      import_playbook: 01_extraction.yml
+
+    - name: 02 - Réconciliation
+      import_playbook: 02_conciliation.yml
+
+    - name: 03 - Génération rapport
+      import_playbook: 03_generation_csv.yml
+
+    - name: 04 - Archivage
+      import_playbook: 04_archivage.yml
+
+    - name: 05 - Notification
+      import_playbook: 05_notification.yml
