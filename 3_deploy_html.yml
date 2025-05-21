@@ -6,6 +6,6 @@
   tasks:
     - name: Déployer la page HTML
       copy:
-        src: files/index.html
+        src: index.html
         dest: "{{ app_path }}/index.html"
         mode: '0644'
