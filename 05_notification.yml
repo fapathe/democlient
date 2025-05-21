@@ -1,0 +1,6 @@
+- name: Notification en fin de traitement
+  hosts: all
+  tasks:
+    - name: Afficher un message de fin
+      debug:
+        msg: "✅ Rapport généré et archivé avec succès pour BIS."
