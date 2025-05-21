@@ -1,0 +1,11 @@
+- name: Simulation Extraction des Données vers CSV
+  hosts: all
+  tasks:
+    - name: Générer un fichier CSV de transactions
+      copy:
+        dest: output/extraction.csv
+        content: |
+          date,transaction_id,montant,devise
+          2025-05-20,TX12345,5000,EUR
+          2025-05-20,TX12346,3200,USD
+          2025-05-20,TX12347,7800,EUR
