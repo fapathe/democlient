@@ -1,0 +1,45 @@
+- name: Génération de rapport depuis CSV
+  hosts: localhost
+  vars:
+    csv_path: output/extraction.csv
+  tasks:
+    - name: Lire le fichier CSV
+      community.general.read_csv:
+        path: "{{ csv_path }}"
+      register: result_csv
+
+    - name: Calculer les totaux par devise
+      set_fact:
+        totaux_par_devise: >-
+          {{
+            result_csv.list | reject('search', '^#') | map(attribute='fields') | 
+            selectattr('devise', 'defined') |
+            groupby('devise') | 
+            map('zip', ['devise', 'transactions']) | 
+            map('map', attribute='1') | 
+            list | 
+            items2dict(
+              key_name='devise',
+              value_name='montant_total'
+            )
+          }}
+      vars:
+        items2dict: >
+          {{
+            lambda lst:
+              dict(
+                (d[0], (d[1] | map(attribute='montant') | map('float') | sum))
+                for d in lst
+              )
+          }}
+
+    - name: Générer le rapport
+      copy:
+        dest: "output/rapport_bis_{{ ansible_date_time.date }}.txt"
+        content: |
+          Rapport Financier - {{ ansible_date_time.date }}
+          ============================================================
+          Total des transactions par devise :
+          {% for devise, total in totaux_par_devise.items() %}
+          - {{ devise }} : {{ "%.2f"|format(total) }}
+          {% endfor %}
