@@ -1,0 +1,10 @@
+- name: Simulation Génération Rapport
+  hosts: localhost
+  tasks:
+    - name: Générer rapport
+      copy:
+        content: |
+          Rapport Financier - 2025-05-21
+          ==============================================
+          Données traitées automatiquement.
+        dest: output/rapport_bis_2025-05-21.txt
