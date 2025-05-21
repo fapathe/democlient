@@ -1,5 +1,5 @@
 - name: Simulation Génération Rapport
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Générer rapport
       copy:
