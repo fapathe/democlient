@@ -1,0 +1,6 @@
+- name: Notification de succès
+  hosts: localhost
+  tasks:
+    - name: Afficher un message de succès
+      debug:
+        msg: "✅ Déploiement NGINX BIS terminé avec succès !"
