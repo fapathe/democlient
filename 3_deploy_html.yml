@@ -1,0 +1,11 @@
+- name: Déployer la page HTML BIS
+  hosts: webservers
+  become: true
+  vars:
+    app_path: /usr/share/nginx/html
+  tasks:
+    - name: Déployer la page HTML
+      copy:
+        src: files/index.html
+        dest: "{{ app_path }}/index.html"
+        mode: '0644'
