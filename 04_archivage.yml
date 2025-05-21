@@ -1,0 +1,7 @@
+- name: Simulation Archivage
+  hosts: localhost
+  tasks:
+    - name: Copier le rapport dans une archive
+      copy:
+        src: "output/rapport_bis_{{ ansible_date_time.date }}.txt"
+        dest: "output/archive_{{ ansible_date_time.date }}.txt"
