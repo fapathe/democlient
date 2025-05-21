@@ -1,0 +1,14 @@
+- name: Installer et démarrer NGINX
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Installer nginx
+      package:
+        name: nginx
+        state: present
+
+    - name: Démarrer nginx
+      service:
+        name: nginx
+        state: started
+        enabled: true
