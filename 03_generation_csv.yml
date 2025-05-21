@@ -1,5 +1,5 @@
 - name: Génération de rapport depuis CSV
-  hosts: localhost
+  hosts: all
   vars:
     csv_path: output/extraction.csv
   tasks:
