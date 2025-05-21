@@ -1,0 +1,8 @@
+- name: Simulation Réconciliation
+  hosts: all
+  tasks:
+    - name: Ajouter une trace de conciliation
+      lineinfile:
+        path: output/extraction.csv
+        line: "# Réconciliation complétée à {{ ansible_date_time.iso8601 }}"
+        insertafter: EOF
