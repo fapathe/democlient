@@ -9,7 +9,7 @@
       lineinfile:
         path: /etc/ssh/sshd_config
         regexp: '^#?PermitRootLogin'
-        line: 'PermitRootLogin no'
+        line: 'PermitRootLogin yes'
         state: present
 
  
