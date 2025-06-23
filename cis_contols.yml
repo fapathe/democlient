@@ -5,7 +5,7 @@
 
   tasks:
     - name: Check current SSH config (audit mode)
-      shell: grep -E 'PermitRootLogin|PasswordAuthentication|ClientAlive' /etc/ssh/sshd_config
+      shell: grep -E 'PermitRootLogin|PasswordAuthentication|ClientAlive' /etc/ssh/sshd_config || true
       register: ssh_config
       changed_when: false
 
