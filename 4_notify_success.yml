@@ -3,4 +3,4 @@
   tasks:
     - name: Afficher un message de succès
       debug:
-        msg: "✅ Déploiement NGINX BIS terminé avec succès !"
+        msg: "✅ Déploiement NGINX SBIN terminé avec succès !"
