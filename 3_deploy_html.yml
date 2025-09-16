@@ -1,4 +1,4 @@
-- name: Déployer la page HTML BIS
+- name: Déployer la page HTML SBIN
   hosts: all
   become: true
   vars:
