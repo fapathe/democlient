@@ -2,13 +2,13 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portail SBIN</title>
+  <meta-name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portail BCEAO</title>
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #003366, #005599);
+      background: linear-gradient(to right, #512b58, #2d1530);
       color: white;
       text-align: center;
       display: flex;
@@ -18,13 +18,14 @@
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: rgba(0, 0, 0, 0.25);
       padding: 1em 0;
     }
 
     h1 {
       font-size: 3em;
       margin: 0.2em 0;
+      color: #ffc107; /* Or BCEAO */
     }
 
     p {
@@ -33,8 +34,8 @@
     }
 
     .btn {
-      background-color: #ffcc00;
-      color: #003366;
+      background-color: #ffc107; /* Bouton BCEAO */
+      color: #512b58;
       padding: 0.8em 1.5em;
       font-size: 1em;
       border: none;
@@ -42,10 +43,11 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s;
+      font-weight: bold;
     }
 
     .btn:hover {
-      background-color: #e6b800;
+      background-color: #e0ad06; /* hover basé sur #ffc107 */
     }
 
     footer {
@@ -53,18 +55,20 @@
       bottom: 10px;
       width: 100%;
       font-size: 0.9em;
-      color: #cccccc;
+      color: #dddddd;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Bienvenue sur le Portail BCAO</h1>
+    <h1>Bienvenue sur le Portail BCEAO</h1>
     <p>Votre infrastructure automatisée avec Ansible Automation Platform</p>
     <a href="#" class="btn">Explorer les Services</a>
   </header>
+
   <footer>
-    &copy; 2025 BCAO - Tous droits réservés.
+    &copy; 2025 BCEAO - Tous droits réservés.
   </footer>
 </body>
 </html>
