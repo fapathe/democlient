@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portail BCEAO</title>
+  <title>Portail BIMAO</title>
+
   <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #512b1e, #3b1f16); /* Nouveau background */
-      color: white;
+      background: linear-gradient(135deg, #003a8f, #b11226);
+      color: #ffffff;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -18,57 +19,63 @@
     }
 
     header {
-      background-color: rgba(0, 0, 0, 0.25);
-      padding: 1em 0;
+      background-color: rgba(255, 255, 255, 0.12);
+      padding: 2.2em 1.5em;
+      border-radius: 14px;
+      margin: 0 12%;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
     }
 
     h1 {
       font-size: 3em;
-      margin: 0.2em 0;
-      color: #ffc107; /* Or BCEAO */
+      margin-bottom: 0.3em;
+      color: #ffffff;
     }
 
     p {
-      font-size: 1.3em;
-      margin-bottom: 1em;
+      font-size: 1.25em;
+      margin-bottom: 1.6em;
+      color: #f1f1f1;
     }
 
     .btn {
-      background-color: #ffc107;
-      color: #512b1e;
-      padding: 0.8em 1.5em;
-      font-size: 1em;
+      background-color: #b11226; /* Rouge BIMAO */
+      color: #ffffff;
+      padding: 0.9em 2.2em;
+      font-size: 1.05em;
       border: none;
-      border-radius: 8px;
+      border-radius: 30px;
       cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s;
+      transition: all 0.3s ease;
       font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
     .btn:hover {
-      background-color: #e0ad06;
+      background-color: #8f0e1f;
+      transform: translateY(-2px);
     }
 
     footer {
       position: absolute;
-      bottom: 10px;
+      bottom: 12px;
       width: 100%;
       font-size: 0.9em;
-      color: #dddddd;
+      color: #e5e5e5;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Bienvenue sur le Portail BCEAO</h1>
+    <h1>Bienvenue sur le Portail BIMAO</h1>
     <p>Votre infrastructure automatisée avec Ansible Automation Platform</p>
     <a href="#" class="btn">Explorer les Services</a>
   </header>
 
   <footer>
-    &copy; 2025 BCEAO - Tous droits réservés.
+    &copy; 2025 BIMAO — Tous droits réservés.
   </footer>
 </body>
 </html>
